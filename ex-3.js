@@ -1,3 +1,4 @@
+//Exercise #3: Merging the Arrays
 let orders = [
   { orderId: "A001", paymentType: "Cash", totalPrice: 2500 },
   { orderId: "A002", paymentType: "Credit Card", totalPrice: 4000 },
@@ -10,5 +11,9 @@ let additionalOrders = [
 ];
 
 // Start coding here
+const mergArray=(arr1,arr2)=>{
+return arr1.concat(arr2);
+}
 
+let newOrders = mergArray(orders,additionalOrders);
 console.log(newOrders);

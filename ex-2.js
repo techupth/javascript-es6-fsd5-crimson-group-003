@@ -14,12 +14,18 @@ let studentScores = {
 
 // Start coding here
 
-let newStudentProfile = {
-  ...studentProfile,
-  scores: {
-    ...studentProfile.scores,
-    ...studentScores,
-  },
-};
+function additionalStudentInformation(obj1,obj2){
+  let newObject = {
+    ...obj1,
+    scores:{
+    ...obj1.scores,
+    ...obj2},
+  };
+    return newObject
+}
+ const newStudentProfile = additionalStudentInformation(
+   studentProfile,
+   studentScores
+ );
 
 console.log(newStudentProfile);

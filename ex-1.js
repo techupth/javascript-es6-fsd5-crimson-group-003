@@ -12,9 +12,15 @@ let additionalProperties = {
 };
 
 // Start coding here
-let newStudentProfile = {
-  ...studentProfile,
-  ...additionalProperties,
-};
+
+
+function additionalStudentInformation(obj1,obj2){
+  let newObject = {
+     ...obj1,
+     ...obj2,
+   };
+   return newObject
+ }
+const newStudentProfile = additionalStudentInformation(studentProfile,additionalProperties);
 
 console.log(newStudentProfile);
